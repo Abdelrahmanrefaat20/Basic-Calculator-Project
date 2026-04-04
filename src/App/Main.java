@@ -16,8 +16,12 @@ void main() throws Exception {
 
     String input1;
     while (true) {
-        System.out.println("Enter first number: ");
+        System.out.println("Enter first number or exit : ");
         input1 = sc.next();
+        if (input1.equals("exit")) {
+
+            return;
+        }
 
         if (validator.isValidNumber(input1)) {
             break;
@@ -29,8 +33,11 @@ void main() throws Exception {
     double w = Double.parseDouble(input1);
     String op;
     while (true) {
-        System.out.println("Enter operator: ");
+        System.out.println("Enter operator or exit: ");
         op = sc.next();
+        if (op.equals("exit")) {
+            return;
+        }
 
         if (op.equals("+") || op.equals("-") || op.equals("*") || op.equals("/")) {
             break;
@@ -40,8 +47,11 @@ void main() throws Exception {
     }
     String input2;
     while (true) {
-        System.out.println("Enter second number: ");
+        System.out.println("Enter second number or exit : ");
         input2 = sc.next();
+        if (input2.equals("exit")) {
+            return;
+        }
 
         if (validator.isValidNumber(input2)) {
             break;
