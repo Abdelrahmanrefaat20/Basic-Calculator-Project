@@ -8,10 +8,10 @@ void main() throws Exception {
     Scanner sc = new Scanner(System.in);
 
 
-    Multiplication Multiply = new Multiplication();
-    Addition Add = new Addition();
-    Subtraction Subtract = new Subtraction();
-    Division Divide = new Division();
+    operations Multiply = new Multiplication();
+    operations Add = new Addition();
+    operations Subtract = new Subtraction();
+    operations Divide = new Division();
     Vaildtor validator = new Vaildtor();
 
     String input1;
