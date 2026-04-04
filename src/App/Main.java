@@ -8,10 +8,10 @@ void main() throws Exception {
     Scanner sc = new Scanner(System.in);
 
 
-    Multiplication multiplication = new Multiplication();
-    Addition addition = new Addition();
-    Subtraction minus = new Subtraction();
-    Division divide = new Division();
+    Multiplication Multiply = new Multiplication();
+    Addition Add = new Addition();
+    Subtraction Subtract = new Subtraction();
+    Division Divide = new Division();
     Vaildtor validator = new Vaildtor();
 
     String input1;
@@ -53,14 +53,14 @@ void main() throws Exception {
     double s = Double.parseDouble(input2);
     double result = 0;
     if (op.equals("-")) {
-        result = minus.calculate(w, s);
+        result = Subtract.calculate(w, s);
     } else if (op.equals("/")) {
-        result = divide.calculate(w, s);
+        result = Divide.calculate(w, s);
 
     } else if (op.equals("*")) {
-        result = multiplication.calculate(w, s);
+        result = Multiply.calculate(w, s);
     } else if (op.equals("+")) {
-        result = addition.calculate(w, s);
+        result = Add.calculate(w, s);
     }
 
 
