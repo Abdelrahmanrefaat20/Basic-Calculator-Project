@@ -30,7 +30,8 @@ void main() throws Exception {
         System.out.println("Invalid input. Enter a number only.");
     }
 
-    double w = Double.parseDouble(input1);
+    double input_1 = Double.parseDouble(input1);
+
     String op;
     while (true) {
         System.out.println("Enter operator or exit: ");
@@ -60,23 +61,23 @@ void main() throws Exception {
         System.out.println("Invalid input. Enter a number only.");
     }
 
-    double s = Double.parseDouble(input2);
+    double input_2 = Double.parseDouble(input2);
     double result = 0;
     if (op.equals("-")) {
-        result = Subtract.calculate(w, s);
+        result = Subtract.calculate(input_1, input_2);
     } else if (op.equals("/")) {
-        result = Divide.calculate(w, s);
+        result = Divide.calculate(input_1, input_2);
 
     } else if (op.equals("*")) {
-        result = Multiply.calculate(w, s);
+        result = Multiply.calculate(input_1, input_2);
     } else if (op.equals("+")) {
-        result = Add.calculate(w, s);
+        result = Add.calculate(input_1, input_2);
     }
 
 
-    if (s == 0) {
+    if (input_2 == 0) {
         System.out.println(" ");
-    } else System.out.println("Result: " + w + " " + op + " " + s + " = " + result);
+    } else System.out.println("Result: " + input_1 + " " + op + " " + input_2 + " = " + result);
 
 
 }
