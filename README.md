@@ -1,63 +1,69 @@
-Basic Calculator Project
+🧮 Basic Calculator Project
+A Java console-based calculator built with Object-Oriented Programming principles and robust exception handling.
 
-Java console calculator built using object oriented programming and exception handling.
+📋 Description
+This project implements a simple yet well-structured calculator that performs basic arithmetic operations through a clean command-line interface. It validates all user input and gracefully handles errors such as division by zero.
 
-Description
-This project implements a simple calculator that performs basic arithmetic operations. It validates user input and handles errors like division by zero.
+✨ Features
 
-Features
+➕ Supports addition, subtraction, multiplication, and division
+🔢 Accepts both integers and decimal numbers
+🛡️ Input validation — rejects letters and invalid symbols
+⚠️ Division by zero handled with a clear error message
+🏗️ Clean architecture using interfaces and classes
+📊 Results displayed in a formatted output
 
-Supports addition, subtraction, multiplication, division
-Accepts integers and decimal numbers
-Validates input to prevent letters or invalid symbols
-Handles division by zero with clear error message
-Clean structure using interface and classes
-Displays result in formatted output
 
-Technologies
+🛠️ Technologies Used
+TechnologyPurposeJavaCore programming languageOOP ConceptsInterface, classes, inheritanceException HandlingInput validation & runtime errors
 
-Java
-OOP concepts
-Exception handling
+📁 Project Structure
+Basic-Calculator-Project/
+│
+├── src/
+│   ├── Operation.java        # Interface defining the calculate() method
+│   ├── Add.java              # Addition operation
+│   ├── Subtract.java         # Subtraction operation
+│   ├── Multiply.java         # Multiplication operation
+│   ├── Divide.java           # Division operation (with zero check)
+│   ├── InputValidator.java   # Validates numbers and operators
+│   └── Main.java             # Entry point — handles user I/O
+│
+├── .gitignore
+├── OOP.iml
+└── README.md
 
-Project Structure
+🚀 How to Run
 
-Operation interface
-Add class
-Subtract class
-Multiply class
-Divide class
-InputValidator class
-Main class
+Clone the repository
 
-How to Run
+bash   git clone https://github.com/Abdelrahmanrefaat20/Basic-Calculator-Project.git
 
-Open the project in your IDE
+Open the project in your IDE (e.g., IntelliJ IDEA)
 Run the Main class
-Enter numbers and operator when prompted
+Follow the prompts — enter your numbers and operator
 
-Example
 
-Input
-Enter first number: 10
-Enter operator: /
+💡 Usage Examples
+✅ Successful Calculation
+Enter first number:  10
+Enter operator:      /
 Enter second number: 2
 
-Output
 Result: 10.0 / 2.0 = 5.0
-
-Example with error
-
-Input
-Enter first number: 5
-Enter operator: /
+❌ Division by Zero
+Enter first number:  5
+Enter operator:      /
 Enter second number: 0
 
-Output
-Error: Division by zero is not allowed
+Error: Division by zero is not allowed.
+❌ Invalid Input
+Enter first number:  abc
 
-Validation Rules
+Error: Invalid input. Please enter a valid number.
 
-Only numbers are accepted as input
-Only + - * / are allowed operators
-Invalid input will prompt the user again
+✅ Validation Rules
+InputRuleNumbersMust be valid integers or decimals — no letters or symbolsOperatorsOnly +, -, *, / are acceptedDivisionDenominator must not be zeroInvalid inputUser is prompted to re-enter
+
+👤 Author
+Abdelrahman Refaat
