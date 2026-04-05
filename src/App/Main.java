@@ -75,7 +75,7 @@ void main() throws Exception {
     }
 
 
-    if (input_2 == 0) {
+    if (input_2 == 0 && op.equals("/")) {
         System.out.println(" ");
     } else System.out.println("Result: " + input_1 + " " + op + " " + input_2 + " = " + result);
 
