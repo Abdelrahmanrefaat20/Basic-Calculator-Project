@@ -1,12 +1,10 @@
 
 
 import test.*;
+import javax.swing.JOptionPane;
 
 
 void main() throws Exception {
-
-    Scanner sc = new Scanner(System.in);
-
 
     operations Multiply = new Multiplication();
     operations Add = new Addition();
@@ -16,8 +14,7 @@ void main() throws Exception {
 
     String input1;
     while (true) {
-        System.out.println("Enter first number or exit : ");
-        input1 = sc.next();
+         input1 = JOptionPane.showInputDialog("Enter first number or exit : ");
         if (input1.equals("exit")) {
 
             return;
@@ -27,15 +24,15 @@ void main() throws Exception {
             break;
         }
 
-        System.out.println("Invalid input. Enter a number only.");
+        JOptionPane.showMessageDialog(null,"Invalid input. Enter a number only.");
     }
 
     double input_1 = Double.parseDouble(input1);
 
     String op;
     while (true) {
-        System.out.println("Enter operator or exit: ");
-        op = sc.next();
+
+        op =  JOptionPane.showInputDialog("Enter operator or exit: ");
         if (op.equals("exit")) {
             return;
         }
@@ -44,12 +41,12 @@ void main() throws Exception {
             break;
         }
 
-        System.out.println("Invalid operator. Use + - * / only.");
+        JOptionPane.showMessageDialog(null,"Invalid operator. Use + - * / only.");
     }
     String input2;
     while (true) {
-        System.out.println("Enter second number or exit : ");
-        input2 = sc.next();
+
+        input2 = JOptionPane.showInputDialog("Enter second number or exit : ");
         if (input2.equals("exit")) {
             return;
         }
@@ -58,7 +55,7 @@ void main() throws Exception {
             break;
         }
 
-        System.out.println("Invalid input. Enter a number only.");
+        JOptionPane.showMessageDialog(null,"Invalid input. Enter a number only.");
     }
 
     double input_2 = Double.parseDouble(input2);
@@ -76,8 +73,9 @@ void main() throws Exception {
 
 
     if (input_2 == 0 && op.equals("/")) {
-        System.out.println(" ");
-    } else System.out.println("Result: " + input_1 + " " + op + " " + input_2 + " = " + result);
+        JOptionPane.showMessageDialog(null,"Error: divide by zero not allowed");
+        return;
+    } else JOptionPane.showMessageDialog(null,"Result: " + input_1 + " " + op + " " + input_2 + " = " + result);
 
 
 }
